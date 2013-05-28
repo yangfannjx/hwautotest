@@ -1,4 +1,4 @@
-﻿package com.gionee.hwautotest.mms;
+﻿package com.test.hwautotest.mms;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -12,10 +12,10 @@ import android.content.Context;
 import android.net.Uri;
 import android.util.Log;
 
-import com.gionee.hwautotest.mms.Telephony.Mms;
-import com.gionee.hwautotest.mms.Telephony.Threads;
-import com.gionee.hwautotest.mms.Telephony.Mms.Addr;
-import com.gionee.hwautotest.mms.Telephony.Mms.Part;
+import com.test.hwautotest.mms.Telephony.Mms;
+import com.test.hwautotest.mms.Telephony.Threads;
+import com.test.hwautotest.mms.Telephony.Mms.Addr;
+import com.test.hwautotest.mms.Telephony.Mms.Part;
 
 
 

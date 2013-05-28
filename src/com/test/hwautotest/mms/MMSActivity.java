@@ -1,4 +1,4 @@
-﻿package com.gionee.hwautotest.mms;
+﻿package com.test.hwautotest.mms;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,9 +18,9 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 import com.gionee.hwautotest.R;
-import com.gionee.hwautotest.mms.MMSUtils.AttachmentType;
-import com.gionee.hwautotest.mms.Telephony.Mms;
-import com.gionee.utils.ViewHolder;
+import com.test.hwautotest.mms.MMSUtils.AttachmentType;
+import com.test.hwautotest.mms.Telephony.Mms;
+import com.test.utils.ViewHolder;
 
 public class MMSActivity extends Activity {
 	String[] title = {"彩信附件格式","彩信位置"}; 

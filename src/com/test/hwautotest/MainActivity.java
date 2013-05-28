@@ -1,4 +1,4 @@
-﻿package com.gionee.hwautotest;
+﻿package com.test.hwautotest;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,12 +11,13 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
-import com.gionee.hwautotest.calllog.CallLogActivity;
-import com.gionee.hwautotest.contacts.ContactsActivity;
-import com.gionee.hwautotest.filemanager.FileManagerActivity;
-import com.gionee.hwautotest.mms.MMSActivity;
-import com.gionee.hwautotest.sms.SMSActivity;
-import com.gionee.hwautotest.txttoxls.TxtToXlsActivity;
+import com.gionee.hwautotest.R;
+import com.test.hwautotest.calllog.CallLogActivity;
+import com.test.hwautotest.contacts.ContactsActivity;
+import com.test.hwautotest.filemanager.FileManagerActivity;
+import com.test.hwautotest.mms.MMSActivity;
+import com.test.hwautotest.sms.SMSActivity;
+import com.test.hwautotest.txttoxls.TxtToXlsActivity;
 
 public class MainActivity extends Activity {
 

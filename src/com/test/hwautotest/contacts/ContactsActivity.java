@@ -1,4 +1,4 @@
-﻿package com.gionee.hwautotest.contacts;
+﻿package com.test.hwautotest.contacts;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,8 +32,8 @@ import android.widget.TextView;
 import com.gionee.hwautotest.R;
 import com.gionee.hwautotest.R.id;
 import com.gionee.hwautotest.R.layout;
-import com.gionee.hwautotest.calllog.CallLogActivity.ProgressDailogAsyncTask;
-import com.gionee.utils.*;
+import com.test.hwautotest.calllog.CallLogActivity.ProgressDailogAsyncTask;
+import com.test.utils.*;
 
 public class ContactsActivity extends Activity {
 	

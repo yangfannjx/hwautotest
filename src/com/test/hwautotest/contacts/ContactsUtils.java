@@ -1,6 +1,6 @@
-﻿package com.gionee.hwautotest.contacts;
+﻿package com.test.hwautotest.contacts;
 
-import com.gionee.utils.RandomUtils;
+import com.test.utils.RandomUtils;
 
 import android.content.ContentResolver;
 import android.content.ContentUris;

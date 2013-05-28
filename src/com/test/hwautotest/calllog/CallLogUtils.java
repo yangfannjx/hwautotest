@@ -1,8 +1,8 @@
-﻿package com.gionee.hwautotest.calllog;
+﻿package com.test.hwautotest.calllog;
 
 import java.util.Random;
 
-import com.gionee.utils.RandomUtils;
+import com.test.utils.RandomUtils;
 
 import android.content.ContentResolver;
 import android.content.ContentValues;

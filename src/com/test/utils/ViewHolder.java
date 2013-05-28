@@ -1,4 +1,4 @@
-﻿package com.gionee.utils;
+﻿package com.test.utils;
 
 import android.widget.CheckBox;
 import android.widget.TextView;

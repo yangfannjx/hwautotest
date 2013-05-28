@@ -1,4 +1,4 @@
-﻿package com.gionee.hwautotest.calllog;
+﻿package com.test.hwautotest.calllog;
 
 import android.app.Activity;
 import android.app.ProgressDialog;

@@ -1,4 +1,4 @@
-package com.gionee.utils;
+package com.test.utils;
 
 import java.util.Random;
 

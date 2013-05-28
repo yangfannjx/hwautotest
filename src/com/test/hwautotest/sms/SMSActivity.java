@@ -1,4 +1,4 @@
-﻿package com.gionee.hwautotest.sms;
+﻿package com.test.hwautotest.sms;
 
 import java.util.Random;
 

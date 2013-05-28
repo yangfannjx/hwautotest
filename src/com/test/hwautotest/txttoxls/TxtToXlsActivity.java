@@ -1,4 +1,4 @@
-package com.gionee.hwautotest.txttoxls;
+package com.test.hwautotest.txttoxls;
 
 import java.io.File;
 import java.io.FileOutputStream;

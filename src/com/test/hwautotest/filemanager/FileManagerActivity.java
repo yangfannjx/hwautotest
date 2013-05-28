@@ -1,4 +1,4 @@
-﻿package com.gionee.hwautotest.filemanager;
+﻿package com.test.hwautotest.filemanager;
 
 import java.io.File;
 import java.io.IOException;

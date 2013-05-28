@@ -28,7 +28,7 @@
 	
  */
 
-package com.gionee.hwautotest.mms;
+package com.test.hwautotest.mms;
 
 import java.util.HashSet;
 import java.util.Set;

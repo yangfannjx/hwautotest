@@ -1,4 +1,4 @@
-﻿package com.gionee.hwautotest.sms;
+﻿package com.test.hwautotest.sms;
 
 import android.content.ContentResolver;
 import android.content.ContentValues;
@@ -6,7 +6,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
 import android.widget.Toast;
-import com.gionee.utils.*;
+
+import com.test.utils.*;
 
 
 public class SMSUtils {
