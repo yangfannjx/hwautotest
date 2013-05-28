@@ -48,7 +48,7 @@ public class FileManagerActivity extends Activity implements SeekBar.OnSeekBarCh
 		
 		
 		
-		if(mFilemanagerUtils.IsContain("mnt", SDCardPath)){
+		if(mFilemanagerUtils.isContain("mnt", SDCardPath)){
 			InternalPath = "/mnt/sdcard2";
 		}else{
 			InternalPath = "/storage/sdcard1";

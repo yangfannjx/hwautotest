@@ -192,7 +192,7 @@ public class FilemanagerUtils {
 	 * @param sentence
 	 * @return
 	 */
-	public boolean IsContain(String word,String sentence){
+	public boolean isContain(String word,String sentence){
 		return Pattern.compile(word).matcher(sentence).find();
 	}
 	
