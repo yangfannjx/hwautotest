@@ -35,10 +35,9 @@ public class MainActivity extends Activity {
 		ArrayList<HashMap<String, String>> mylist = new ArrayList<HashMap<String, String>>();
 		
 		String[] title = { "联系人容量设置", "短信容量设置", "通话记录容量设置", "文件管理器容量设置",
-				"生成自动化测试报告","彩信容量设置"};
+				"生成自动化测试报告"};
 		String[] text = { "自动添加中文联系人、英文联系人以及清除全部联系人", "自动添加短信以及删除全部短信",
-				"自动添加通话记录以及删除全部通话记录", "调整SD卡和内部管理器的容量", "自动生成xls的自动化测试报告",
-				"自动添加彩信以及删除全部彩信"};
+				"自动添加通话记录以及删除全部通话记录", "调整SD卡和内部管理器的容量", "自动生成xls的自动化测试报告"};
 
 		for (int i = 0; i < title.length; i++) {
 			HashMap<String, String> map = new HashMap<String, String>();

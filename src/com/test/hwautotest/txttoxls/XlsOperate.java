@@ -161,7 +161,7 @@ public class XlsOperate {
 							cell = sheet.getRow(j).createCell(7,HSSFCell.CELL_TYPE_NUMERIC);
 							cell.setCellStyle(style);
 							cell.setCellValue(Integer.parseInt(value));
-							refreshFormula(sheet, j, j, 8, 8);//注意刷新范围！！！
+							refreshFormula(sheet, j, j, 8, 8);//注意刷新范围！！！只刷新有公式的第8列
 							break;
 						}
 					}
