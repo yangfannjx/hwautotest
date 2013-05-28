@@ -23,13 +23,13 @@ import com.test.hwautotest.mms.Telephony.Mms;
 import com.test.utils.ViewHolder;
 
 public class MMSActivity extends Activity {
-	String[] title = {"彩信附件格式","彩信位置"}; 
-	String[] item = {"图片","收件箱"};
-	ListView mmsSetting;
-	Dialog mDialog; 
-	Button addMms;
-	int msgBoxType = Mms.MESSAGE_BOX_INBOX; 
-	AttachmentType TYPE = AttachmentType.IMAGE;
+	private String[] title = {"彩信附件格式","彩信位置"}; 
+	private String[] item = {"图片","收件箱"};
+	private ListView mmsSetting;
+	private Dialog mDialog; 
+	private Button addMms;
+	private int msgBoxType = Mms.MESSAGE_BOX_INBOX; 
+	private AttachmentType TYPE = AttachmentType.IMAGE;
 
 	
 	@Override

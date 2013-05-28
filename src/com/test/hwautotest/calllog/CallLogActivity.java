@@ -125,13 +125,13 @@ public class CallLogActivity extends Activity {
 
 	}
 
-	public class ProgressDailogAsyncTask extends
+	private class ProgressDailogAsyncTask extends
 			AsyncTask<Integer, Integer, String> {
 
 		int type = 1;
 		int number = 0;
 
-		public ProgressDailogAsyncTask(int type, int number) {
+		private ProgressDailogAsyncTask(int type, int number) {
 			super();
 			this.type = type;
 			this.number = number;

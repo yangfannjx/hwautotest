@@ -20,20 +20,20 @@ import com.gionee.hwautotest.R;
 
 public class FileManagerActivity extends Activity implements SeekBar.OnSeekBarChangeListener {
 	
-	File SDRoad = null;
-	SeekBar SDCardSeek;
-	SeekBar InternalSeek;
-	TextView SDCardAvailaleSize;
-	TextView InternalAvailaleSize;
-	Button SDAddFile;
-	Button InternalAddFile;
-	ProgressDialog m_pDialog;
-	String SDCardPath = Environment.getExternalStorageDirectory().getPath();
-	String InternalPath = "/mnt/sdcard2";
-	long TotalSize = 0;
-	long UsedSize = 0;
-	int SDAddSize = 0;
-	int InternalAddSize = 0;
+	private File SDRoad = null;
+	private SeekBar SDCardSeek;
+	private SeekBar InternalSeek;
+	private TextView SDCardAvailaleSize;
+	private TextView InternalAvailaleSize;
+	private Button SDAddFile;
+	private Button InternalAddFile;
+	private ProgressDialog m_pDialog;
+	private String SDCardPath = Environment.getExternalStorageDirectory().getPath();
+	private String InternalPath = "/mnt/sdcard2";
+	private long TotalSize = 0;
+	private long UsedSize = 0;
+	private int SDAddSize = 0;
+	private int InternalAddSize = 0;
 	
 	FilemanagerUtils mFilemanagerUtils = new FilemanagerUtils(FileManagerActivity.this);
 	
@@ -86,15 +86,6 @@ public class FileManagerActivity extends Activity implements SeekBar.OnSeekBarCh
 				m_pDialog.setMax(SDAddSize);
 				m_pDialog.setIndeterminate(false);
 				m_pDialog.setCancelable(true);
-				
-				m_pDialog.setButton(DialogInterface.BUTTON_POSITIVE,"确定", new DialogInterface.OnClickListener() {
-					
-					@Override
-					public void onClick(DialogInterface dialog, int which) {
-						// TODO Auto-generated method stub
-						dialog.cancel();
-					}
-				});
 				m_pDialog.show();
 				
 				ProgressDailogAsyncTask asyncTask = new ProgressDailogAsyncTask(SDCardPath,SDAddSize);  
@@ -120,15 +111,6 @@ public class FileManagerActivity extends Activity implements SeekBar.OnSeekBarCh
 			m_pDialog.setMax(InternalAddSize);
 			m_pDialog.setIndeterminate(false);
 			m_pDialog.setCancelable(true);
-			
-			m_pDialog.setButton(DialogInterface.BUTTON_POSITIVE,"确定", new DialogInterface.OnClickListener() {
-				
-				@Override
-				public void onClick(DialogInterface dialog, int which) {
-					// TODO Auto-generated method stub
-					dialog.cancel();
-				}
-			});
 			m_pDialog.show();
 			
 			ProgressDailogAsyncTask asyncTask = new ProgressDailogAsyncTask(InternalPath,InternalAddSize);  
@@ -179,12 +161,12 @@ public class FileManagerActivity extends Activity implements SeekBar.OnSeekBarCh
 		
 	}
 	
-	public class ProgressDailogAsyncTask extends AsyncTask<Integer, Integer, String> {
+	private class ProgressDailogAsyncTask extends AsyncTask<Integer, Integer, String> {
 		String path;
 		int size = 0;
 		File file;
 		
-		public ProgressDailogAsyncTask(String path,int size) {  
+		private ProgressDailogAsyncTask(String path,int size) {  
 	        super();  
 	        this.path = path;  
 	        this.size = size;  

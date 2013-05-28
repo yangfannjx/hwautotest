@@ -23,20 +23,20 @@ public class SMSActivity extends Activity {
 	private EditText messageNumber;
 	private Button clearMessage;
 	private TextView messageTitle;
-	RadioGroup words;
-	RadioButton senventy;
-	RadioButton oneHundredsixty;
-	RadioButton eightHundreds;
+	private RadioGroup words;
+	private RadioButton senventy;
+	private RadioButton oneHundredsixty;
+	private RadioButton eightHundreds;
 	
-	RadioGroup type;
-	RadioButton inbox;
-	RadioButton sent;
-	RadioButton drag;
-	RadioGroup read;
-	RadioButton alreadyRead;
-	RadioButton unRead;
+	private RadioGroup type;
+	private RadioButton inbox;
+	private RadioButton sent;
+	private RadioButton drag;
+	private RadioGroup read;
+	private RadioButton alreadyRead;
+	private RadioButton unRead;
 	
-	ProgressDialog m_pDialog;
+	private ProgressDialog m_pDialog;
 	SMSUtils mMessageUtils = new SMSUtils(this);
 	
 	int messageType = 1;
@@ -127,17 +127,6 @@ public class SMSActivity extends Activity {
 				m_pDialog.setMax(number);
 				m_pDialog.setIndeterminate(false);
 				m_pDialog.setCancelable(true);
-
-				m_pDialog.setButton(DialogInterface.BUTTON_POSITIVE, "取消",
-						new DialogInterface.OnClickListener() {
-
-							@Override
-							public void onClick(DialogInterface dialog,
-									int which) {
-								// TODO Auto-generated method stub
-								dialog.cancel();
-							}
-						});
 				m_pDialog.show();
 				ProgressDailogAsyncTask asyncTask = new ProgressDailogAsyncTask(number,wordsNumber, readSatuts, messageType);
 				asyncTask.execute(1000);	
@@ -170,14 +159,14 @@ public class SMSActivity extends Activity {
 			}
 		});
 	}
-	public class ProgressDailogAsyncTask extends AsyncTask<Integer, Integer, String> {
+	private class ProgressDailogAsyncTask extends AsyncTask<Integer, Integer, String> {
 		
-		int number;
-		int wordsNumber;
-		int readSatuts;
-		int messageType;
+		private int number;
+		private int wordsNumber;
+		private int readSatuts;
+		private int messageType;
 		
-		public ProgressDailogAsyncTask (int number,int wordsNumber,int readSatuts,int messageType){
+		private ProgressDailogAsyncTask (int number,int wordsNumber,int readSatuts,int messageType){
 			super();
 			this.number = number;
 			this.wordsNumber = wordsNumber;

@@ -32,22 +32,21 @@ import android.widget.TextView;
 import com.gionee.hwautotest.R;
 import com.gionee.hwautotest.R.id;
 import com.gionee.hwautotest.R.layout;
-import com.test.hwautotest.calllog.CallLogActivity.ProgressDailogAsyncTask;
 import com.test.utils.*;
 
 public class ContactsActivity extends Activity {
 	
-	Button addContacts;
-	Button clearContacts;
-	EditText contactNumber;
-	TextView contactAmount;
-	CheckBox email;
-	CheckBox notes;
-	CheckBox nickname;
-	CheckBox website;
-	CheckBox company;
-	CheckBox IM;
-	CheckBox address;
+	private Button addContacts;
+	private Button clearContacts;
+	private EditText contactNumber;
+	private TextView contactAmount;
+	private CheckBox email;
+	private CheckBox notes;
+	private CheckBox nickname;
+	private CheckBox website;
+	private CheckBox company;
+	private CheckBox IM;
+	private CheckBox address;
 	RadioGroup name;
 	RadioButton chineseName;
 	RadioButton englishName;
@@ -262,9 +261,9 @@ public class ContactsActivity extends Activity {
 				}
 			}
 	
-	public static class MyAdapter extends BaseAdapter {
+	private static class MyAdapter extends BaseAdapter {
 
-		 public static HashMap<Integer, Boolean> isSelected;
+		 private static HashMap<Integer, Boolean> isSelected;
 	     private Context context = null;
 	     private LayoutInflater inflater = null;
 	     private List<HashMap<String, Object>> list = null;
@@ -272,7 +271,7 @@ public class ContactsActivity extends Activity {
 	     private String itemString = null; // 记录每个item中textview的值
 	     private int idValue[] = null;// id值
 
-	     public MyAdapter(Context context, List<HashMap<String, Object>> list,
+	     private MyAdapter(Context context, List<HashMap<String, Object>> list,
 	             int resource, String[] from, int[] to) {
 	         this.context = context;
 	         this.list = list;
@@ -285,7 +284,7 @@ public class ContactsActivity extends Activity {
 	     }
 
 	     // 初始化 设置所有checkbox都为未选择
-	     public void init() {
+	     private void init() {
 	         isSelected = new HashMap<Integer, Boolean>();
 	         for (int i = 0; i < list.size(); i++) {
 	             isSelected.put(i, false);
@@ -334,7 +333,7 @@ public class ContactsActivity extends Activity {
 	}
 	
 	// 显示带有checkbox的listview 
-	public void showCheckBoxListView() { 
+	private void showCheckBoxListView() { 
 		list = new ArrayList<HashMap<String, Object>>(); 
 		for (int i = 0; i < chioce.length; i++) { 
 		 

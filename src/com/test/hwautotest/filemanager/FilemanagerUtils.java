@@ -17,9 +17,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class FilemanagerUtils {
-	long TotalSize = 0;
-	long UsedSize = 0;
-	public Context mContext;
+	private long TotalSize = 0;
+	private long UsedSize = 0;
+	private Context mContext;
 	
 	public FilemanagerUtils(Context mContext){
 		this.mContext = mContext;
