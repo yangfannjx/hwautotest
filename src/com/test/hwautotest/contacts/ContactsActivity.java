@@ -35,18 +35,20 @@ import com.gionee.hwautotest.R.layout;
 import com.test.utils.*;
 
 public class ContactsActivity extends Activity {
-	
+	public static final int EMAIL = 0;
+    public static final int IM = 1;
+    public static final int COMPANY = 2;
+    public static final int ADDRESS = 3;
+    public static final int NOTES = 4;
+    public static final int NICKNAME = 5;
+    public static final int WEBSITE = 6;
+  
+    
 	private Button addContacts;
 	private Button clearContacts;
 	private EditText contactNumber;
 	private TextView contactAmount;
-	private CheckBox email;
-	private CheckBox notes;
-	private CheckBox nickname;
-	private CheckBox website;
-	private CheckBox company;
-	private CheckBox IM;
-	private CheckBox address;
+
 	RadioGroup name;
 	RadioButton chineseName;
 	RadioButton englishName;
@@ -121,19 +123,7 @@ public class ContactsActivity extends Activity {
 					m_pDialog.setMax(number);
 					m_pDialog.setIndeterminate(false);
 					m_pDialog.setCancelable(true);
-
-					m_pDialog.setButton(DialogInterface.BUTTON_POSITIVE, "取消",
-							new DialogInterface.OnClickListener() {
-
-								@Override
-								public void onClick(DialogInterface dialog,
-										int which) {
-									// TODO Auto-generated method stub
-									dialog.cancel();
-								}
-							});
 					m_pDialog.show();
-
 					ProgressDailogAsyncTask asyncTask = new ProgressDailogAsyncTask(language ,number,addEmail,addNotes ,addAddress ,
 					addCompany , addIM ,addNickName,addWebsite);
 					asyncTask.execute(1000);
@@ -186,7 +176,7 @@ public class ContactsActivity extends Activity {
 	 * @author gongyangyang
 	 *
 	 */
-	public class ProgressDailogAsyncTask extends AsyncTask<Integer, Integer, String> {
+	private class ProgressDailogAsyncTask extends AsyncTask<Integer, Integer, String> {
 				
 				String language = null;
 				int number = 0;
@@ -355,39 +345,39 @@ public class ContactsActivity extends Activity {
 				holder.cb.toggle();// 在每次获取点击的item时改变checkbox的状态 
 				MyAdapter.isSelected.put(position, holder.cb.isChecked()); // 同时修改map的值保存状态
 				switch(position){
-				case 0:
+				case EMAIL:
 					if (holder.cb.isChecked() == true) { 
 						addEmail = true;
 					}
 					break;
-				case 1:
+				case IM:
 					if (holder.cb.isChecked() == true) { 
 						addIM = true;
 					}
 					break;
-				case 2:
+				case COMPANY:
 					if (holder.cb.isChecked() == true) { 
 						addCompany = true;
 					}
 					break;
-				case 3:
+				case ADDRESS:
 					if (holder.cb.isChecked() == true) { 
 						addAddress = true;
 					}
 					break;
-				case 4:
-					if (holder.cb.isChecked() == true) { 
-						addEmail = true;
-					}
-					break;
-				case 5:
+				case NOTES:
 					if (holder.cb.isChecked() == true) { 
 						addNotes = true;
 					}
 					break;
-				case 6:
+				case NICKNAME:
 					if (holder.cb.isChecked() == true) { 
 						addNickName = true;
+					}
+					break;
+				case WEBSITE:
+					if (holder.cb.isChecked() == true) { 
+						addWebsite = true;
 					}
 					break;
 				}

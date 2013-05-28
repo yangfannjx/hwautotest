@@ -153,7 +153,9 @@ public final class Telephony {
          * </P>
          */
         public static final String READ = "read";
-
+        
+        public static final int MESSAGE_READ = 1;
+        public static final int MESSAGE_UNREAD = 0;
         /**
          * Indicates whether this message has been seen by the user. The "seen"
          * flag will be used to figure out whether we need to throw up a

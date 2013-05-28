@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
+import java.util.regex.Pattern;
 
 
 import android.annotation.SuppressLint;
@@ -182,6 +183,17 @@ public class FilemanagerUtils {
     */
 	public String formatSize(long size, Context mContext) {
 		return Formatter.formatShortFileSize(mContext, size);
+	}
+	
+	/**
+	 * 
+	 * 判断路径中是否包含字符
+	 * @param word
+	 * @param sentence
+	 * @return
+	 */
+	public boolean IsContain(String word,String sentence){
+		return Pattern.compile(word).matcher(sentence).find();
 	}
 	
 }

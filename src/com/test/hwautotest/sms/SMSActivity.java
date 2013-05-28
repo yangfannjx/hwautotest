@@ -16,6 +16,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.gionee.hwautotest.R;
+import com.test.hwautotest.mms.Telephony.Sms;;
 
 public class SMSActivity extends Activity {
 
@@ -37,11 +38,15 @@ public class SMSActivity extends Activity {
 	private RadioButton unRead;
 	
 	private ProgressDialog m_pDialog;
+	
+	public static final int NUMBER_SENVENTY = 0;
+    public static final int NUMBER_ONEHUNDREDSIXTY = 1;
+    public static final int NUMBER_EIGHTHUNDREDS = 2;
 	SMSUtils mMessageUtils = new SMSUtils(this);
 	
-	int messageType = 1;
+	int messageType = Sms.MESSAGE_TYPE_INBOX;
 	int wordsNumber = 0;
-	int readSatuts = 0;
+	int readSatuts = Sms.MESSAGE_READ;
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -72,11 +77,11 @@ public class SMSActivity extends Activity {
 			public void onCheckedChanged(RadioGroup group, int checkedId) {
 				// TODO Auto-generated method stub
 				if(checkedId == senventy.getId()){
-					wordsNumber = 0;
+					wordsNumber = NUMBER_SENVENTY;
 				}else if(checkedId == oneHundredsixty.getId()){
-					wordsNumber = 1;
+					wordsNumber = NUMBER_ONEHUNDREDSIXTY;
 				}else if(checkedId == eightHundreds.getId()){
-					wordsNumber = 2;
+					wordsNumber = NUMBER_EIGHTHUNDREDS;
 				}
 			}
 		});
@@ -87,11 +92,11 @@ public class SMSActivity extends Activity {
 			public void onCheckedChanged(RadioGroup group, int checkedId) {
 				// TODO Auto-generated method stub
 				if(checkedId == inbox.getId()){
-					messageType = 1;
+					messageType = Sms.MESSAGE_TYPE_INBOX;
 				}else if(checkedId == sent.getId()){
-					messageType = 2;
+					messageType = Sms.MESSAGE_TYPE_SENT;
 				}else if(checkedId == drag.getId()){
-					messageType = 3;
+					messageType = Sms.MESSAGE_TYPE_DRAFT;
 				}
 			}
 		});
@@ -102,9 +107,9 @@ public class SMSActivity extends Activity {
 			public void onCheckedChanged(RadioGroup group, int checkedId) {
 				// TODO Auto-generated method stub
 				if(checkedId == alreadyRead.getId()){
-					readSatuts = 1;
+					readSatuts = Sms.MESSAGE_READ;
 				}else if(checkedId == unRead.getId()){
-					readSatuts = 0;
+					readSatuts = Sms.MESSAGE_UNREAD;
 				}
 			}
 		});

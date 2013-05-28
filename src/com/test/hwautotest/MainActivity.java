@@ -20,7 +20,12 @@ import com.test.hwautotest.sms.SMSActivity;
 import com.test.hwautotest.txttoxls.TxtToXlsActivity;
 
 public class MainActivity extends Activity {
-
+	 public static final int CONTACTS = 0;
+     public static final int SMS = 1;
+     public static final int CALLLOG = 2;
+     public static final int FILEMANAGER = 3;
+     public static final int REPORT = 4;
+     public static final int MMS = 5;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -56,32 +61,32 @@ public class MainActivity extends Activity {
 					int position, long id) {
 				// TODO Auto-generated method stub
 				switch (position) {
-				case 0:
+				case CONTACTS:
 					Intent contactIntent = new Intent(MainActivity.this,
 							ContactsActivity.class);
 					startActivity(contactIntent);
 					break;
-				case 1:
+				case SMS:
 					Intent smsIntent = new Intent(MainActivity.this,
 							SMSActivity.class);
 					startActivity(smsIntent);
 					break;
-				case 2:
+				case CALLLOG:
 					Intent calllogIntent = new Intent(MainActivity.this,
 							CallLogActivity.class);
 					startActivity(calllogIntent);
 					break;
-				case 3:
+				case FILEMANAGER:
 					Intent fileManagerIntent = new Intent(MainActivity.this,
 							FileManagerActivity.class);
 					startActivity(fileManagerIntent);
 					break;
-				case 4:
+				case REPORT:
 					Intent TextIntent = new Intent(MainActivity.this,
 							TxtToXlsActivity.class);
 					startActivity(TextIntent);
 					break;
-				case 5:
+				case MMS:
 					Intent MmsIntent = new Intent(MainActivity.this,
 							MMSActivity.class);
 					startActivity(MmsIntent);
@@ -93,4 +98,6 @@ public class MainActivity extends Activity {
 		});
 
 	}
+	
+	
 }

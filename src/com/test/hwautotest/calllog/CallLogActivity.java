@@ -29,6 +29,8 @@ public class CallLogActivity extends Activity {
 	private int type;
 	private int number;
 	private ProgressDialog m_pDialog;
+	
+	
 
 	CallLogUtils mCallLogUtils = new CallLogUtils(this);
 
@@ -54,13 +56,13 @@ public class CallLogActivity extends Activity {
 			public void onCheckedChanged(RadioGroup group, int checkedId) {
 				// TODO Auto-generated method stub
 				if (checkedId == mReceive.getId()) {
-					type = 1;
+					type = CallLog.Calls.INCOMING_TYPE;
 				} else if (checkedId == mOutgoing.getId()) {
-					type = 2;
+					type = CallLog.Calls.OUTGOING_TYPE;
 				} else if (checkedId == mMissed.getId()) {
-					type = 3;
+					type = CallLog.Calls.MISSED_TYPE;
 				} else {
-					type = 1;
+					type = CallLog.Calls.INCOMING_TYPE;
 				}
 			}
 		});
@@ -79,17 +81,6 @@ public class CallLogActivity extends Activity {
 					m_pDialog.setMax(number);
 					m_pDialog.setIndeterminate(false);
 					m_pDialog.setCancelable(true);
-
-					m_pDialog.setButton(DialogInterface.BUTTON_POSITIVE, "取消",
-							new DialogInterface.OnClickListener() {
-
-								@Override
-								public void onClick(DialogInterface dialog,
-										int which) {
-									// TODO Auto-generated method stub
-									dialog.cancel();
-								}
-							});
 					m_pDialog.show();
 					ProgressDailogAsyncTask asyncTask = new ProgressDailogAsyncTask(
 							type, number);
@@ -128,7 +119,7 @@ public class CallLogActivity extends Activity {
 	private class ProgressDailogAsyncTask extends
 			AsyncTask<Integer, Integer, String> {
 
-		int type = 1;
+		int type = CallLog.Calls.INCOMING_TYPE;
 		int number = 0;
 
 		private ProgressDailogAsyncTask(int type, int number) {
@@ -165,7 +156,7 @@ public class CallLogActivity extends Activity {
 			m_pDialog.cancel();
 		}
 
-		// 该方法运行在UI线程当中,并且运行在UI线程当中 可以对UI空间进行设置
+		
 		@Override
 		protected void onPreExecute() {
 			// m_pDialog.setTitle("正在添加");
